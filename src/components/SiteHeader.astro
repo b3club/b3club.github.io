@@ -21,9 +21,11 @@ const pathname = Astro.url.pathname;
         class="h-12 w-auto scale-150 transform-gpu sm:h-14"
         loading="eager"
       />
-      <span class="hidden font-display text-base font-black sm:inline">
-        <span class="text-builder">Bricks,</span>{' '}
-        <span class="text-pixel">Blocks,</span>{' '}
+      <span class="hidden font-display text-base font-black leading-tight sm:inline-flex sm:flex-col">
+        <span>
+          <span class="text-builder">Bricks,</span>{' '}
+          <span class="text-pixel">Blocks</span>
+        </span>
         <span class="text-circuit">and Bots</span>
       </span>
     </a>

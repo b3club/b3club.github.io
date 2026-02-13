@@ -25,7 +25,6 @@ This sitemap defines the full content structure for **Bricks, Blocks, and Bots (
 - Explanation of B3 as a family innovation hub (not a drop-off daycare model)
 - 3-pillar visual summary: Bricks, Blocks, Bots
 - AI Track teaser as "new literacy"
-- Founding 50 Cohort email capture CTA
 - Trust cues (Austin/Cedar Park focus, mentor-led environment)
 - Quick links to About, Curriculum, and Join
 
@@ -230,7 +229,7 @@ This sitemap defines the full content structure for **Bricks, Blocks, and Bots (
 - Curriculum
 - Community
 - Blog
-- Join (Founding 50)
+- Join
 - Contact
 - FAQ
 - Privacy

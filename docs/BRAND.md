@@ -1,5 +1,5 @@
 # B3 Brand Guidelines
-**Company Name:** Bricks, Blocks, and Bots
+**Company Name:** Bricks, Blocks, and Bot
 **Brand Mark:** B3
 **Domain:** b3fc.org
 
