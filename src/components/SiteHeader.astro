@@ -1,0 +1,43 @@
+---
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/curriculum', label: 'Curriculum' },
+  { href: '/community', label: 'Community' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/join', label: 'Join' },
+  { href: '/contact', label: 'Contact' }
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b border-white/10 bg-slate-900/75 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="font-display text-lg font-extrabold tracking-tight sm:text-xl">
+      <span class="text-builder">B</span><span class="text-pixel">3</span>
+      <span class="ml-2 text-sm font-semibold text-slate-200">Bricks, Blocks, and Bots</span>
+    </a>
+    <nav class="hidden gap-5 text-sm font-semibold md:flex">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'transition hover:text-builder',
+            pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+              ? 'text-builder'
+              : 'text-slate-200'
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+    <a
+      href="/join"
+      class="rounded-full bg-builder px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-orange-300"
+    >
+      Founding 50
+    </a>
+  </div>
+</header>

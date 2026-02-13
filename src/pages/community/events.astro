@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const events = [
+  {
+    date: 'March 6, 2026',
+    title: 'Bricks + Bots Sprint Lab',
+    location: 'Cedar Park Innovation Studio',
+    detail: 'Hands-on build challenge focused on gear ratios and motor control.'
+  },
+  {
+    date: 'March 20, 2026',
+    title: 'Pitch Pod Demo Night',
+    location: 'North Austin Community Hub',
+    detail: 'Kids present projects to mentors and receive structured feedback.'
+  },
+  {
+    date: 'April 3, 2026',
+    title: 'AI Co-Build Workshop',
+    location: 'Cedar Park Learning Lab',
+    detail: 'Parent-child workshop on prompt quality, ethics, and prototype ideation.'
+  }
+];
+---
+
+<BaseLayout title="Events" description="B3 workshops and demo days in Cedar Park and Austin.">
+  <PageHero
+    eyebrow="Events"
+    title="Workshops, Demo Days, and Community Builds"
+    lead="Monthly programming designed to help families apply engineering ideas and showcase progress."
+  />
+
+  <section class="mx-auto max-w-4xl space-y-4 px-4 py-12 sm:px-6 lg:px-8">
+    {events.map((event) => (
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <p class="text-sm font-bold uppercase tracking-[0.15em] text-pixel">{event.date}</p>
+        <h2 class="mt-1 text-2xl font-black">{event.title}</h2>
+        <p class="mt-2 text-slate-300">{event.location}</p>
+        <p class="mt-3 text-slate-300">{event.detail}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

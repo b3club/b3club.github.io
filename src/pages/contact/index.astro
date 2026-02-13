@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<BaseLayout title="Contact" description="Contact B3 for enrollment and partnership questions.">
+  <PageHero
+    eyebrow="Contact"
+    title="Questions, Mentorship, or Partnerships"
+    lead="Reach out for enrollment details, mentor participation, or local collaboration opportunities."
+  />
+
+  <section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <h2 class="text-2xl font-black">Get in Touch</h2>
+      <form class="mt-4 space-y-3">
+        <input class="w-full rounded-lg border border-white/20 bg-slate-900 px-3 py-2 text-white" placeholder="Name" />
+        <input class="w-full rounded-lg border border-white/20 bg-slate-900 px-3 py-2 text-white" type="email" placeholder="Email" />
+        <textarea class="h-32 w-full rounded-lg border border-white/20 bg-slate-900 px-3 py-2 text-white" placeholder="Message"></textarea>
+        <button class="rounded-full bg-circuit px-5 py-2 font-bold text-slate-950" type="button">Send</button>
+      </form>
+      <p class="mt-4 text-slate-300">Email: hello@b3fc.org</p>
+    </article>
+  </section>
+</BaseLayout>

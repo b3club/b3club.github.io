@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<BaseLayout title="About B3" description="Learn the B3 mission, philosophy, and family co-learning model.">
+  <PageHero
+    eyebrow="About"
+    title="A Y Combinator for Families"
+    lead="B3 unites kids who want to build and parents who want to mentor in one collaborative prototyping community."
+  />
+
+  <section class="mx-auto max-w-6xl space-y-8 px-4 py-12 sm:px-6 lg:px-8">
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-7">
+      <h2 class="text-2xl font-black">Mission</h2>
+      <p class="mt-3 text-slate-300">Empower the next generation of makers and innovators by uniting passionate kids with supportive parents in a collaborative, tech-forward environment.</p>
+    </article>
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-7">
+      <h2 class="text-2xl font-black">Dual-Audience Model</h2>
+      <p class="mt-3 text-slate-300"><strong>Kids build</strong> with structure, creativity, and confidence. <strong>Parents mentor</strong> by sharing engineering and leadership principles in a hands-on context.</p>
+    </article>
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-7">
+      <h2 class="text-2xl font-black">Local Focus</h2>
+      <p class="mt-3 text-slate-300">B3 serves Cedar Park and the greater Austin tech corridor with a playful-professional learning culture built around collaboration and fail-forward iteration.</p>
+    </article>
+  </section>
+</BaseLayout>

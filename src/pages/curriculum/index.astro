@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const tracks = (await getCollection('curriculum')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Curriculum" description="Bricks, Blocks, Bots, AI Track, and Entrepreneurship pathways.">
+  <PageHero
+    eyebrow="Curriculum"
+    title="From Play to Prototyping"
+    lead="Families follow a progression through physical engineering, digital logic, hardware integration, AI literacy, and entrepreneurship."
+  />
+
+  <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {tracks.map((track) => (
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-glow">
+          <h2 class="text-xl font-black">{track.data.title}</h2>
+          <p class="mt-3 text-slate-300">{track.data.summary}</p>
+          <a href={`/curriculum/${track.slug}`} class="mt-4 inline-block font-bold text-builder">Read track →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

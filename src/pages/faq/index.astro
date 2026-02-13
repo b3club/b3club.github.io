@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const faqs = [
+  {
+    q: 'What age range is best for B3?',
+    a: 'B3 is designed for kids ages 6-12, with activities adjusted by readiness and experience.'
+  },
+  {
+    q: 'Is this a drop-off program?',
+    a: 'No. The model is parent-child co-learning with active mentor participation.'
+  },
+  {
+    q: 'Do we need equipment at home?',
+    a: 'No required home equipment to start. Program sessions provide core tools and guided kits.'
+  },
+  {
+    q: 'How does AI safety work?',
+    a: 'AI activities are age-appropriate and include guided prompt hygiene, ethics, and supervision.'
+  }
+];
+---
+
+<BaseLayout title="FAQ" description="Common questions about B3 enrollment, format, and safety.">
+  <PageHero eyebrow="FAQ" title="Common Parent Questions" lead="Quick answers about format, fit, logistics, and safety." />
+
+  <section class="mx-auto max-w-4xl space-y-4 px-4 py-12 sm:px-6 lg:px-8">
+    {faqs.map((item) => (
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-black">{item.q}</h2>
+        <p class="mt-2 text-slate-300">{item.a}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

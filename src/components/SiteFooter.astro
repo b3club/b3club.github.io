@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: '/about', label: 'About' },
+  { href: '/curriculum', label: 'Curriculum' },
+  { href: '/community', label: 'Community' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/join', label: 'Join' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/terms', label: 'Terms' }
+];
+---
+
+<footer class="mt-16 border-t border-white/10 bg-slate-900/70">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="mb-6 text-2xl font-black">
+      <span class="text-builder">Build.</span>
+      <span class="text-pixel"> Learn.</span>
+      <span class="text-circuit"> Connect.</span>
+    </div>
+    <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="transition hover:text-builder">{link.label}</a>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-6 text-sm text-slate-400">© {new Date().getFullYear()} Bricks, Blocks, and Bots · Cedar Park, TX</p>
+  </div>
+</footer>

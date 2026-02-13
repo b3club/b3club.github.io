@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FeatureGrid from '../../components/FeatureGrid.astro';
+
+const items = [
+  {
+    title: 'Mentor Spotlights',
+    description: 'Profiles of parent experts sharing practical engineering and leadership skills.'
+  },
+  {
+    title: 'Family Outcomes',
+    description: 'Testimonials and project milestones from participating families.'
+  },
+  {
+    title: 'Local Partnerships',
+    description: 'Community collaborations across Cedar Park and Austin innovation networks.'
+  }
+];
+---
+
+<BaseLayout title="Community" description="See the B3 mentor network, families, and local collaboration.">
+  <PageHero
+    eyebrow="Community"
+    title="Built by Families, Backed by Mentors"
+    lead="B3 is a local ecosystem where parents and kids build side-by-side and learn from the process together."
+  />
+
+  <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <FeatureGrid items={items} />
+    <a href="/community/events" class="mt-8 inline-block rounded-full bg-circuit px-6 py-3 font-extrabold text-slate-950">View Events</a>
+  </section>
+</BaseLayout>

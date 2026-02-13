@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+export async function getStaticPaths() {
+  const tracks = await getCollection('curriculum');
+  return tracks.map((track) => ({
+    params: { slug: track.slug },
+    props: { track }
+  }));
+}
+
+const { track } = Astro.props;
+const { Content } = await render(track);
+---
+
+<BaseLayout title={track.data.title} description={track.data.summary}>
+  <PageHero eyebrow="Track" title={track.data.title} lead={track.data.summary} />
+
+  <section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+    <article class="prose prose-invert prose-slate rounded-2xl border border-white/10 bg-white/5 p-8">
+      <Content />
+    </article>
+  </section>
+</BaseLayout>
