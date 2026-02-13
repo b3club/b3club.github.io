@@ -19,6 +19,16 @@ const { title, description = 'Family innovation hub in Cedar Park and greater Au
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | B3</title>
+    <script is:inline>
+      (() => {
+        const key = 'b3-theme';
+        const stored = localStorage.getItem(key);
+        const theme = stored === 'dark' || stored === 'light' ? stored : 'light';
+        const root = document.documentElement;
+        root.classList.remove('theme-light', 'theme-dark');
+        root.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light');
+      })();
+    </script>
   </head>
   <body>
     <SiteHeader />
@@ -26,5 +36,33 @@ const { title, description = 'Family innovation hub in Cedar Park and greater Au
       <slot />
     </main>
     <SiteFooter />
+    <script is:inline>
+      (() => {
+        const key = 'b3-theme';
+        const root = document.documentElement;
+        const button = document.querySelector('[data-theme-toggle]');
+        const lightIcon = document.querySelector('[data-theme-icon-light]');
+        const darkIcon = document.querySelector('[data-theme-icon-dark]');
+        if (!button || !lightIcon || !darkIcon) return;
+
+        const getTheme = () => (root.classList.contains('theme-dark') ? 'dark' : 'light');
+        const syncControl = () => {
+          const isDark = getTheme() === 'dark';
+          lightIcon.classList.toggle('hidden', isDark);
+          darkIcon.classList.toggle('hidden', !isDark);
+          button.setAttribute('aria-label', isDark ? 'Switch to white theme' : 'Switch to black theme');
+        };
+
+        button.addEventListener('click', () => {
+          const nextTheme = getTheme() === 'dark' ? 'light' : 'dark';
+          root.classList.remove('theme-light', 'theme-dark');
+          root.classList.add(nextTheme === 'dark' ? 'theme-dark' : 'theme-light');
+          localStorage.setItem(key, nextTheme);
+          syncControl();
+        });
+
+        syncControl();
+      })();
+    </script>
   </body>
 </html>

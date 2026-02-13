@@ -14,9 +14,18 @@ const pathname = Astro.url.pathname;
 
 <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-900/75 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-    <a href="/" class="font-display text-lg font-extrabold tracking-tight sm:text-xl">
-      <span class="text-builder">B</span><span class="text-pixel">3</span>
-      <span class="ml-2 text-sm font-semibold text-slate-200">Bricks, Blocks, and Bots</span>
+    <a href="/" class="flex items-center gap-3">
+      <img
+        src="/b3-logo.png"
+        alt="Bricks, Blocks, and Bots logo"
+        class="h-12 w-auto scale-150 transform-gpu sm:h-14"
+        loading="eager"
+      />
+      <span class="hidden font-display text-base font-black sm:inline">
+        <span class="text-builder">Bricks,</span>{' '}
+        <span class="text-pixel">Blocks,</span>{' '}
+        <span class="text-circuit">and Bots</span>
+      </span>
     </a>
     <nav class="hidden gap-5 text-sm font-semibold md:flex">
       {nav.map((item) => (
@@ -33,11 +42,35 @@ const pathname = Astro.url.pathname;
         </a>
       ))}
     </nav>
-    <a
-      href="/join"
-      class="rounded-full bg-builder px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-orange-300"
+    <button
+      type="button"
+      data-theme-toggle
+      class="rounded-full border border-white/10 bg-white/40 p-1.5 text-slate-500 transition hover:border-white/20 hover:text-slate-700"
+      aria-label="Switch to black theme"
+      title="Toggle theme"
     >
-      Founding 50
-    </a>
+      <svg
+        data-theme-icon-light
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg data-theme-icon-dark xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+      </svg>
+    </button>
   </div>
 </header>
