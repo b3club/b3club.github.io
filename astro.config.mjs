@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx';
 import preact from '@astrojs/preact';
 
 export default defineConfig({
-  site: 'https://b3fc.org',
+  site: 'http://b3fc.org',
   devToolbar: {
     enabled: true
   },

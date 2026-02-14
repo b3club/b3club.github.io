@@ -138,7 +138,7 @@ Ensure the production URL matches your canonical domain in:
 
 Current setting should remain:
 ```js
-site: 'https://b3fc.org'
+site: 'http://b3fc.org'
 ```
 
 ### 5) Post-deploy checklist
