@@ -42,6 +42,26 @@ a {
   color: inherit;
 }
 
+main {
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+.prose {
+  overflow-wrap: anywhere;
+}
+
+.prose pre {
+  overflow-x: auto;
+}
+
 .theme-light body {
   --bg: #f8fafc;
   --text: #0f172a;
