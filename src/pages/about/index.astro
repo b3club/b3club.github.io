@@ -1,14 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import InspectProbe from '../../components/InspectProbe';
 ---
 
 <BaseLayout title="About B3" description="Learn the B3 mission, philosophy, and family co-learning model.">
   <PageHero
     eyebrow="About"
-    title="A Y Combinator for Families"
-    lead="B3 unites kids who want to build and parents who want to mentor in one collaborative prototyping community."
+    title="Y Combinator for Families"
+    lead="B3 is not a daycare, nor is it a sterile coding bootcamp. It is an innovation incubator for families"
+    description={[
+      'B3 unites kids who want to build and parents who want to mentor in one collaborative prototyping community.',
+      'We combine the best of physical and digital making with a safe AI layer to support creativity and confidence.',
+      'Our local focus on Cedar Park and the greater Austin tech corridor allows us to build a tight-knit culture of playful professionalism, fail-forward iteration, and ambitious project showcases.',
+      'Through our dual-audience model, kids get to build with structure, creativity, and confidence while parents get to mentor by sharing engineering and leadership principles in a hands-on context.'
+    ]}
+    imageSrc="/b3-founder-picture.png"
+    imageAlt="B3 founder"
+    imageLabel="Noam Maravilla, Founder & CEO"
   />
+  <InspectProbe client:load />
 
   <section class="mx-auto max-w-6xl space-y-8 px-4 py-12 sm:px-6 lg:px-8">
     <article class="rounded-2xl border border-white/10 bg-white/5 p-7">

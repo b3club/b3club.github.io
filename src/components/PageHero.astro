@@ -1,17 +1,46 @@
 ---
 interface Props {
   title: string;
-  lead: string;
+  lead?: string;
+  description?: string[];
   eyebrow?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageLabel?: string;
 }
 
-const { title, lead, eyebrow } = Astro.props;
+const { title, lead, description = [], eyebrow, imageSrc, imageAlt = '', imageLabel } = Astro.props;
+const hasDescription = description.length > 0;
 ---
 
 <section class="border-b border-white/10 bg-grid bg-[size:16px_16px]">
   <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-    {eyebrow && <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-circuit">{eyebrow}</p>}
-    <h1 class="max-w-3xl text-4xl font-black leading-tight sm:text-5xl">{title}</h1>
-    <p class="mt-5 max-w-3xl text-lg text-slate-300">{lead}</p>
+    <div>
+      {eyebrow && <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-circuit">{eyebrow}</p>}
+      <h1 class="max-w-3xl text-4xl font-black leading-tight sm:text-5xl">{title}</h1>
+      <div class:list={['mt-5', imageSrc ? 'flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between' : 'block']}>
+        <div class:list={['space-y-3', imageSrc ? 'sm:max-w-3xl' : 'max-w-3xl']}>
+          {lead && hasDescription && (
+            <blockquote class="border-l-2 border-circuit pl-4 text-lg italic text-slate-200">
+              "{lead}"
+            </blockquote>
+          )}
+          {lead && !hasDescription && <p class="text-lg text-slate-300">{lead}</p>}
+          {description.map((statement) => (
+            <p class="text-lg text-slate-300">{statement}</p>
+          ))}
+        </div>
+        {imageSrc && (
+          <div class="w-full max-w-[224px] shrink-0 self-start sm:ml-6 sm:mr-[150px]">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              class="w-full rounded-2xl border border-white/10 object-cover"
+            />
+            {imageLabel && <p class="mt-2 text-center text-sm font-semibold text-slate-300">{imageLabel}</p>}
+          </div>
+        )}
+      </div>
+    </div>
   </div>
 </section>
