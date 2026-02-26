@@ -7,7 +7,7 @@ author: B3 Team
 
 ## Bricks
 
-- Bring your **Legos** and share with your creations with the class; from starter kits, to Starwars, Harry Potter, and Minecraft, all legos are welcome. 
+- Bring your **Legos** and share with your creations to share with the class; from starter kits, to Starwars, Harry Potter, and Minecraft, all legos are welcome. 
 - **Toybox** is a basic 3D printer that will be availble for everyone to try.
 
 ## Blocks
