@@ -3,21 +3,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 
 const events = [
-  {
-    date: 'Feb 14, 2026 - 2:00 PM to 4:00 PM',
-    title: 'First Experimental Session: Gear Up!',
-    location: 'Cedar Park Library - Collaboration Room 290',
-    detail: 'This is our first experimental session to try out our curriculum and event format with a small group of families. ',
+
+    {
+    date: 'March 14, 2026 - 2:00 PM to 4:00 PM',
+    title: 'First Session',
+    location: 'Cedar Park Library - Classroom',
+    detail: 'This is our first formal session open to families',
     agenda: [
       'Warming with Lego time (10m)',
-      'Introduction to Scratch Programming (10m)',
+      'Scratch Programming : Introduction (10m)',
       'Scratch project time with mentor support (20m)',
       'Break and play time (10m)',
-      'Minecraft Modding intro (10m)',
-      'Minecraft modding project time with mentor support (20m)',
+      'Minecraft Modding : Introduction (10m)',
+      'Minecraft Modding : Project time with mentor support (20m)',
       'Break and play time (10m)',
-      'Micro:bit intro (10m)',
-      'Micro:bit project time with mentor support (20m)',
+      'Micro:bit : Introduction (10m)',
+      'Micro:bit : Project time with mentor support (20m)',
+      'Wrap and feedback (10m)'
+    ]
+  },
+  {
+    date: 'March 28, 2026 - 2:00 PM to 4:00 PM',
+    title: 'Second Session',
+    location: 'Cedar Park Library - Classroom',
+    detail: 'This is our second experimental session to try out our curriculum and event format with a small group of families. ',
+    agenda: [
+      'Warming with Lego time (10m)',
+      'Scratch Programming : Keyboard events (10m)',
+      'Scratch project time with mentor support (20m)',
+      'Break and play time (10m)',
+      'Minecraft Modding : Create items (10m)',
+      'Minecraft Modding : Project time with mentor support (20m)',
+      'Break and play time (10m)',
+      'Micro:bit : Inputs and Outputs (10m)',
+      'Micro:bit : Project time with mentor support (20m)',
       'Wrap and feedback (10m)'
     ]
   }
@@ -28,7 +47,7 @@ const events = [
   <PageHero
     eyebrow="Events"
     title="Sessions, Demo Days, and Community Builds"
-    lead="Monthly programming designed to help families apply engineering ideas and showcase progress."
+    lead="Monthly programming designed to help families apply engineering ideas and showcase progress. The sessions are designed to be fun, hands-on, and collaborative for parents and kids to learn together."
   />
 
   <section class="mx-auto max-w-4xl space-y-4 px-4 py-12 sm:px-6 lg:px-8">

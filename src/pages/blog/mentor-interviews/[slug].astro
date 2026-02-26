@@ -14,8 +14,8 @@ const { Content } = await render(post);
 
 <BaseLayout title={post.data.title} description={post.data.excerpt}>
   <PageHero eyebrow="Mentor Interview" title={post.data.title} lead={post.data.excerpt} />
-  <section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-    <article class="prose prose-invert prose-slate rounded-2xl border border-white/10 bg-white/5 p-8">
+  <section class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+    <article class="blog-markdown rounded-2xl border border-white/10 bg-white/5 p-8">
       <Content />
     </article>
   </section>

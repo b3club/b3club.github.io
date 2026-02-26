@@ -62,6 +62,92 @@ iframe {
   overflow-x: auto;
 }
 
+.blog-markdown {
+  line-height: 1.75;
+  color: #e2e8f0;
+}
+
+.blog-markdown > * + * {
+  margin-top: 1rem;
+}
+
+.blog-markdown h1,
+.blog-markdown h2,
+.blog-markdown h3,
+.blog-markdown h4 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #f8fafc;
+  line-height: 1.25;
+}
+
+.blog-markdown h1 {
+  font-size: 2rem;
+}
+
+.blog-markdown h2 {
+  font-size: 1.5rem;
+}
+
+.blog-markdown h3 {
+  font-size: 1.25rem;
+}
+
+.blog-markdown p {
+  margin: 0;
+}
+
+.blog-markdown ul,
+.blog-markdown ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.blog-markdown li + li {
+  margin-top: 0.375rem;
+}
+
+.blog-markdown a {
+  color: #67e8f9;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-markdown blockquote {
+  margin: 1rem 0;
+  border-left: 2px solid #00b8d9;
+  padding-left: 1rem;
+  color: #cbd5e1;
+}
+
+.blog-markdown code {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.375rem;
+  background-color: rgba(15, 23, 42, 0.75);
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+}
+
+.blog-markdown pre {
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  background-color: rgba(15, 23, 42, 0.9);
+  padding: 1rem;
+}
+
+.blog-markdown pre code {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.blog-markdown hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .theme-light body {
   --bg: #f8fafc;
   --text: #0f172a;
@@ -111,4 +197,37 @@ iframe {
 
 .theme-light .shadow-glow {
   box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+.theme-light .blog-markdown {
+  color: #334155;
+}
+
+.theme-light .blog-markdown h1,
+.theme-light .blog-markdown h2,
+.theme-light .blog-markdown h3,
+.theme-light .blog-markdown h4 {
+  color: #0f172a;
+}
+
+.theme-light .blog-markdown a {
+  color: #0e7490;
+}
+
+.theme-light .blog-markdown blockquote {
+  color: #475569;
+}
+
+.theme-light .blog-markdown code {
+  border-color: rgba(15, 23, 42, 0.16);
+  background-color: rgba(241, 245, 249, 0.95);
+}
+
+.theme-light .blog-markdown pre {
+  border-color: rgba(15, 23, 42, 0.16);
+  background-color: rgba(248, 250, 252, 0.95);
+}
+
+.theme-light .blog-markdown hr {
+  border-top-color: rgba(15, 23, 42, 0.2);
 }
