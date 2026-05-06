@@ -19,6 +19,24 @@ const pillars = [
     href: '/curriculum/bots'
   }
 ];
+
+const projectActions = [
+  {
+    title: 'Publish Playable Games',
+    description: 'Add a game folder under public/games with index.html, styles.css, and game.js, then link it from the Projects page.',
+    href: '/projects'
+  },
+  {
+    title: 'Show the Build Process',
+    description: 'Pair each game with notes about the idea, controls, code concepts, and what changed during testing.',
+    href: '/blog'
+  },
+  {
+    title: 'Demo Day Ready',
+    description: 'Use project links for family showcases, classroom demos, and kid-friendly portfolios.',
+    href: '/community/events'
+  }
+];
 ---
 
 <BaseLayout title="Build. Learn. Connect." description="B3 is a family innovation hub for kids and parents in Cedar Park and Austin.">
@@ -41,6 +59,20 @@ const pillars = [
     <p class="mt-3 max-w-3xl text-slate-300">From physical building to software logic to robotics integration, families move through a complete maker pathway with safe AI support.</p>
     <div class="mt-8">
       <FeatureGrid items={pillars} />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-circuit">Project Arcade</p>
+        <h2 class="mt-2 text-3xl font-black">Publish Web Games</h2>
+        <p class="mt-3 max-w-3xl text-slate-300">A new Projects section gives B3 builders a place to share browser games made with HTML, CSS, and JavaScript.</p>
+      </div>
+      <a href="/projects" class="inline-flex rounded-full border border-white/20 px-5 py-2.5 font-bold text-slate-100 transition hover:border-pixel hover:text-pixel">View Projects</a>
+    </div>
+    <div class="mt-8">
+      <FeatureGrid items={projectActions} />
     </div>
   </section>
 

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const games = [
+  {
+    title: 'Viper Game',
+    description: 'An easy game built with Codex, Viper Game is a simple web game where players control a viper-like character to eat NPC cobras and grow longer. The game features a dynamic environment with randomly spawning cobras, increasing difficulty, and a high score system to challenge players to beat their best score.',
+    href: '/games/viper-game/index.html',
+    status: 'Playable',
+    concepts: ['Codex', 'Web Game', 'Noam M.']
+  }
+];
+
+---
+
+<BaseLayout title="Projects" description="Playable B3 web games and project publishing links.">
+  <PageHero
+    eyebrow="Projects"
+    title="Games and Playable Demos"
+    lead="These are some of the games and playable demos built by the B3 team and community. Each project is designed to showcase the capabilities of our tools and inspire builders to create their own unique experiences."
+  />
+
+  <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h2 class="text-3xl font-black">Playable Projects</h2>
+        <p class="mt-3 max-w-3xl text-slate-300">Each game opens as a standalone static page, so builders can use plain browser files without converting their code into Astro components.</p>
+      </div>
+      
+    </div>
+
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {games.map((game) => (
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-glow">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-black">{game.title}</h3>
+            <span class="rounded-full border border-circuit/40 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-circuit">{game.status}</span>
+          </div>
+          <p class="mt-3 text-slate-300">{game.description}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {game.concepts.map((concept) => (
+              <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-200">{concept}</span>
+            ))}
+          </div>
+          <a href={game.href} class="mt-5 inline-flex font-bold text-builder hover:text-orange-300">Play game -></a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>

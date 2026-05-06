@@ -33,6 +33,8 @@ The site is built with Astro and Tailwind, and its content model is based on:
   - `src/styles/global.css`
 - Route pages:
   - `src/pages`
+- Standalone web games:
+  - `public/games`
 - Content model + markdown collections:
   - `src/content.config.ts`
   - `src/content/curriculum`
@@ -94,6 +96,30 @@ author: B3 Team
 
 Post body content.
 ```
+
+### Add or update web games
+Standalone HTML/CSS/JavaScript games live in:
+- `public/games`
+
+Each game should have its own folder:
+```text
+public/games/my-game/
+  index.html
+  styles.css
+  game.js
+```
+
+The published URL will be:
+- `/games/my-game/index.html`
+
+Use relative asset paths inside standalone games. For example:
+```html
+<script type="module" src="./assets/game.js"></script>
+<link rel="stylesheet" href="./assets/game.css">
+```
+
+After adding the files, list the game on the Projects page by editing:
+- `src/pages/projects/index.astro`
 
 ### Validate before commit
 ```bash

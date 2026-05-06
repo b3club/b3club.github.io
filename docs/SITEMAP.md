@@ -7,10 +7,11 @@ This sitemap defines the full content structure for **Bricks, Blocks, and Bots (
 1. Home
 2. About
 3. Curriculum
-4. Community
-5. Blog
-6. Join
-7. Contact
+4. Projects
+5. Community
+6. Blog
+7. Join
+8. Contact
 
 ## 2. Sitemap Tree With Content Descriptions
 
@@ -109,6 +110,17 @@ This sitemap defines the full content structure for **Bricks, Blocks, and Bots (
 - Budgeting, supply chain, and decision-making basics
 - Public speaking and storytelling for demos
 - Mentor feedback loops and showcase expectations
+
+### /projects/
+**Page:** Projects / Web Game Arcade  
+**Purpose:** Publish playable student web games and explain how to add new standalone HTML/CSS/JavaScript projects.  
+**Primary audience:** Kids sharing projects, parents reviewing outcomes, and mentors preparing demo links.
+
+**Core content:**
+- Playable project cards linking to games hosted under `/games/[slug]/index.html`
+- Publishing workflow for `public/games/[slug]/index.html`, `styles.css`, and `game.js`
+- Skill tags for each game, such as DOM events, timers, state, input, and collision detection
+- Links from project cards to related blog spotlights or event demos when available
 
 ### /community/
 **Page:** Community  
